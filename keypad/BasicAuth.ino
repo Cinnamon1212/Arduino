@@ -32,6 +32,7 @@ int checkPasscode(){
 }
   
 void loop(){
+  memset(userPasscode, 0, sizeof(userPasscode));
   for(i = 0; i < 8; i++){
     while(!userPasscode[i]){
       userPasscode[i] = keypad.getKey();
