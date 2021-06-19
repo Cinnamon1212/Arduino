@@ -52,9 +52,10 @@ void loop() {
     Serial.print(distance);
     Serial.println(" cm");
     lcd.print("Distance: ");
-    lcd.setCursor(0,1);
-    char buff[30]; sprintf(buff, "%d cm", distance);
+    lcd.setCursor(2,1);
     lcd.print(distance);
+    lcd.setCursor(10,1);
+    lcd.print("cm");
     delay(1000);
     analogWrite(buzzPin, buzzVolume);
   }
